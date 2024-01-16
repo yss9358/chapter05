@@ -2,6 +2,7 @@ package com.javaex.ex03;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
 
@@ -15,11 +16,14 @@ public class PhoneBookApp {
 		Reader fr = new FileReader("C:\\javaStudy\\File\\PhoneDB_copy.txt");
 		BufferedReader br = new BufferedReader(fr);
 		
+		
+		
 		// 반복
 		// 파일을 1줄 읽는다
 		//   , 로 분리한다 
-		//     -> name , hp , company
-		// na
+		// String name;
+		// String hp;
+		// String company;
 		
 		
 		// 반복문
