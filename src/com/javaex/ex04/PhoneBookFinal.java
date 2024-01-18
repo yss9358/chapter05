@@ -1,9 +1,12 @@
 package com.javaex.ex04;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,6 +24,8 @@ public class PhoneBookFinal {
 	
 		List<Person> pList = new ArrayList<Person>();
 		
+		Person p01 = new Person("유승수","010-1234-1234","010-4321-4321");
+		pList.add(p01);
 		
 		while(true) {
 			str = br.readLine();
@@ -42,11 +47,19 @@ public class PhoneBookFinal {
 			
 		}
 		
-		Person p01 = new Person("유승수","010-1234-1234","010-4321-4321");
-		pList.add(p01);
 		
 		
+		BufferedWriter bwr = new BufferedWriter(new FileWriter("C:\\javaStudy\\File\\PhoneDB.txt"));
+		
+		for(int i=0; i<pList.size(); i++) {
+		
+			bwr.write(pList.get(i).getName());
+			bwr.newLine();
+			bwr.flush();
+		
+		}
 	
+		
 		
 		System.out.println(pList);
 	
